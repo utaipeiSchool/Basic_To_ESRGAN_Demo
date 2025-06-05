@@ -119,13 +119,13 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import os
 
-lr_dir = '/content/drive/MyDrive/basic/BasicSR/datasets/BSD100/image_SRF_4_LR'
+lr_dir = '/content/drive/MyDrive/basic/BasicSR/datasets/test'
 sr_dir = '/content/drive/MyDrive/basic/BasicSR/results/ESRGAN_BSD100_quick/visualization/BSD100_test'
 
-for i in range(1, 101):
-    img_id = f'{i:03d}'
-    lr_path = os.path.join(lr_dir, f'img_{img_id}.png')
-    sr_path = os.path.join(sr_dir, f'img_{img_id}_ESRGAN_BSD100_quick.png')
+for i in range(1, 9):
+    img_id = f'{i:03d}'  # 001 ~ 008
+    lr_path = os.path.join(lr_dir, f'img_{img_id}x4_0.png')
+    sr_path = os.path.join(sr_dir, f'img_{img_id}x4_0_ESRGAN_BSD100_quick.png')
 
     if not os.path.exists(lr_path) or not os.path.exists(sr_path):
         print(f"❗ 圖片不存在: {lr_path} 或 {sr_path}")
